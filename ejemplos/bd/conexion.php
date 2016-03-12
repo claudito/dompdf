@@ -1,28 +1,35 @@
-<?php
+<?php 
 
-  
-function Conectarse()
+//Clase  Conexion
 
+class Conexion extends mysqli
 {
+	
+	public function __construct()
+	{
+		parent::__construct('localhost','root','sistemas','prueba');
+		$this->query("SET NAMES 'utf8'");
+		$this->connect_errno ? die('Error con la conexion') : $x = 'Conectado';
+		//echo $x;
+		unset($x);
+	}
+    
 
-if(!($link=mysql_connect("localhost","root","")))
+public function recorrer($y)
 {
-
-echo"Presione F5 para Actualizar :P";
-
-	exit();
-}
-  if (!mysql_select_db("prueba",$link)) 
-  {
-
-  	echo"Error seleccionando la base de datos";
-
-  	exit();
-}
-
-return $link;
+ 
+ return mysqli_fetch_array($y);
 
 }
 
 
-  ?>
+
+
+ }
+
+
+
+ //$db = new Conexion();
+
+
+ ?>

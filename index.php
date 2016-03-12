@@ -1,5 +1,5 @@
 <?php 
 
-header('Location: /pdf/ejemplos/');
+header('Location: ejemplos');
 
  ?>

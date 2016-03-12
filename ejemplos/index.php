@@ -10,7 +10,7 @@
 <div class="row clearfix">
 <div class="col-md-12 column">
 <h1>GENERAR REPORTE CON DOMPDF</h1>
-<a href="generar-pdf.php" class="btn btn-primary">GENERAR REPORTE</a>
+<a href="generar-pdf.php" class="btn btn-primary" target="_blank">GENERAR REPORTE</a>
 </div>
 </div>
 </div>

@@ -1,45 +1,44 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>LISTA DE EMPLEADOS</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-<h1>LISTA DE EMPLEADOS</h1>
-<table>
-<thead>
-<tr>	
-<th>CÓDIGO</th>
-<th>NOMBRES</th>
-<th>ÁREA</th>
-<th>SUELDO</th>
-<th>ESTIMADO</th>
-</tr>
-</thead>
+<link rel="stylesheet" href="css/style.css">
+
 <?php
 include('bd/conexion.php');
-$link=Conectarse();
-$sql="SELECT * FROM empleados";  
-$result= mysql_query($sql) or die(mysql_error());
-if(mysql_num_rows($result)==0) die("No hay registros para mostrar");
+$db = new Conexion();
+$query = "SELECT  * FROM empleados;";
+$result = $db->query($query);
+$numfilas = $result->num_rows;
+//echo "El n&uacute;mero de elementos es ".$numfilas;
+?>
+<table class="table">
+<thead>
+<tr class="info">
+<th>ID</th>
+<th>Nombres</th>
+<th>Departamento</th>
+<th>Sueldo</th>
+<th>Estimado</th>
 
-while($row=mysql_fetch_array($result))
-{?>
-
-<tbody>
-<tr>
-<td><?php echo $row[idempleado]; ?></td>
-<td><?php echo $row[nombres]; ?></td>
-<td><?php echo $row[departamento]; ?></td>
-<td><?php echo $row[sueldo]; ?></td>
-<td><?php echo $row[estimado]; ?></td>
 </tr>
-<?php 
+</thead>
+<tbody>
+<?php
 
+for ($x=0;$x<$numfilas;$x++) {
+$fila = $result->fetch_object();
+
+?>
+<tr class="active">
+<td><?php echo $fila->idempleado; ?></td>
+<td><?php echo $fila->nombres; ?></td>
+<td><?php echo $fila->departamento; ?></td>
+<td><?php echo $fila->sueldo; ?></td>
+<td><?php echo $fila->estimado; ?></td>
+</tr>
+<?php
 }
- ?>
+?>
+
 </tbody>
 </table>
-</body>
-</html>
+
+
+
