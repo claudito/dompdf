@@ -6,19 +6,19 @@ html{
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-    margin: 2mm 8mm 2mm 8mm; 
+    margin: 2mm 2mm 2mm 3mm; 
      }
 
 table {     
 font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 font-size: 11px;   
 margin: -2px;  
-width: 1050px; 
+width: 770px; 
 text-align: right;  
 border-collapse: collapse; }
 
 th {
-font-size: 11px;     
+font-size: 13px;     
 font-weight: normal;  
 padding: 8px;  
 background: #b9c9fe;
@@ -27,7 +27,7 @@ border-bottom: 1px solid #fff;
 color: #039; }
 
 td { 
-font-size: 10px;  
+font-size: 12px;  
 padding: 8px;    
 background: #e8edff;   
 border-bottom: 1px solid #fff;
@@ -40,51 +40,25 @@ background: #d0dafd;
 color: #339; }
 
 
-
-.tabla{
-
-width: 600px;
-
-}
-
-h2{
-font-size: 14px;
-text-transform: uppercase;
-font-family:  Arial, Helvetica, sans-serif;
-
+.separacion{
+padding-bottom: -12px;
 }
 
 
-.resaltador{
-background-color: #C3E623;
-width: 500px;
-border-radius: 5px;
 
+.center{
+	text-align: center;
+}
+
+.right{
+	text-align: right;
+}
+.left{
+	text-align: left;
 }
 
 
-.titulo{
-color: #158107;
-font-size: 25px;
-font-family:  Arial, Helvetica, sans-serif;
-
-
-
-}
-
-.alinear{
-
-text-align: center;
-
-
-}
-
-
-.detalle{
-font-family:  Arial, Helvetica, sans-serif;
-font-size: 16px;
-background-color: #4CF736;
-font-style: normal;
-border-radius: 20px;
-
+.cab
+{
+	font-size: 11px;
 }
